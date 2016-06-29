@@ -7,9 +7,11 @@ var mocha = require('gulp-mocha');
 var istanbul = require('gulp-istanbul');
 var nsp = require('gulp-nsp');
 var plumber = require('gulp-plumber');
+var babel = require('gulp-babel');
 
 gulp.task('static', function () {
   return gulp.src('**/*.js')
+    .pipe(babel({presets: 'es2015'}))
     .pipe(excludeGitignore())
     .pipe(eslint())
     .pipe(eslint.format())
@@ -33,6 +35,7 @@ gulp.task('test', ['pre-test'], function (cb) {
   var mochaErr;
 
   gulp.src('test/**/*.js')
+    .pipe(babel({presets: 'es2015'}))
     .pipe(plumber())
     .pipe(mocha({reporter: 'spec'}))
     .on('error', function (err) {

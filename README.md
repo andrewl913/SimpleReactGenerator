@@ -1,5 +1,5 @@
 # generator-simple-react-app [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> Simple react boiler template complete with an Express web server and hot module reloading with Webpack. 
+> Simple react boiler template complete with an Express web server and hot module reloading with Webpack.
 
 ## Installation
 
@@ -15,12 +15,9 @@ Then generate your new project:
 ```bash
 yo simple-react-app
 ```
+This will scaffold a project directory and automatically run npm install
 
-## Getting To Know Yeoman
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
  * Feel free to [learn more about Yeoman](http://yeoman.io/).
 
 ## License

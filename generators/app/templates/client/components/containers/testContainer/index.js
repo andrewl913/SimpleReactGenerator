@@ -2,6 +2,7 @@ import React, {Component, PropTypes } from 'react'
 import {connect} from 'react-redux'
 import {mapStateToProps, mapDispatchToProps} from './reduxMapping'
 import {bindActionCreators} from 'redux'
+import styles from './styles.scss'
 
 
 
@@ -26,19 +27,19 @@ class TestContainer extends Component {
 
   render() {
     return (
-      <div>
-        <h3 style={{color: 'blue'}}>
+      <div className='featureText'>
+        <h3>
           {this.props.getTestData()}
         </h3>
 
-        <button onClick={() => { this.props.testData() }}>
-          Test the Data
+        <button className='featureButton' onClick={() => { this.props.testData() }}>
+          Features
         </button>
         <br /><br />
         <input value={this.props.getInputData()} onChange={e => {this.props.changeData(e.target.value)}}></input>
         <br /><br />
         <button onClick= {() => {this.props.changeData('')}}>
-          Clear the Data
+          Clear Content
         </button>
 
       </div>

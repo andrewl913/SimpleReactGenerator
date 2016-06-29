@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path')
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -7,7 +8,7 @@ module.exports = {
     './client/index.js'
   ],
   output: {
-    path: require("path").resolve("./dist"),
+    path: path.resolve("./dist"),
     filename: 'bundle.js',
     publicPath: '/'
   },
@@ -19,6 +20,14 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
+      },
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css']
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
@@ -27,5 +36,8 @@ module.exports = {
         }
       }
     ]
+  },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, "./components")]
   }
 }

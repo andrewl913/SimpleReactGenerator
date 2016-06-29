@@ -20,9 +20,11 @@
   "author": "Andrew Lincoln",
   "license": "MIT",
   "dependencies": {
+    "css-loader": "^0.23.1",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-plugins": "0.0.17",
+    "node-sass": "^3.8.0",
     "nodemon": "^1.9.2",
     "react": "^15.1.0",
     "react-bootstrap": "^0.29.5",
@@ -31,6 +33,8 @@
     "react-router": "^2.5.1",
     "react-router-redux": "^4.0.5",
     "redux": "^3.5.2",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-hot-middleware": "^2.10.0"
   },
@@ -42,6 +46,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
+    "jasmine": "^2.4.1",
     "react-hot-loader": "^1.3.0",
     "webpack-dev-server": "^1.14.1"
   }

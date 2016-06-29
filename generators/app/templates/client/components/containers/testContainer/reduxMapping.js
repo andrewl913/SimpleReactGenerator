@@ -30,7 +30,6 @@ export function mapStateToProps(state) {
 export function mapDispatchToProps(dispatch) {
 
   return {
-
     testData: () => {
       counter = counter % 5 == 0 ? 0 : counter
 
