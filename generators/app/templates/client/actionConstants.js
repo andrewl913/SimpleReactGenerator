@@ -6,4 +6,4 @@ const ActionType = {
     CHANGE_THE_DATA: 'CHANGE_THE_DATA'
 }
 
-export default ActionType
+export default ActionType;
